@@ -38,7 +38,7 @@ const ProjectCard: React.FC<{ project: Project }> = ({ project }) => {
         <h4 className="text-xs uppercase tracking-wide text-gray-500 mb-2">Tech</h4>
         <div className="flex flex-wrap gap-2">
           {project.techStack.map((tech, index) => (
-            <span key={index} className="inline-flex text-xs bg-accent-light text-accent-dark px-2 py-1 rounded">
+            <span key={index} className="inline-flex text-xs bg-gray-100 text-gray-600 px-2 py-1 rounded">
               {tech}
             </span>
           ))}

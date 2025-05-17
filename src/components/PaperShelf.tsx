@@ -60,7 +60,7 @@ const PaperShelf: React.FC = () => {
                 {paper.tags.map((tag, tagIndex) => (
                   <span 
                     key={tagIndex} 
-                    className="text-xs bg-highlight-light text-highlight-dark px-2 py-1 rounded"
+                    className="text-xs bg-gray-100 text-gray-600 px-2 py-1 rounded"
                   >
                     {tag}
                   </span>
