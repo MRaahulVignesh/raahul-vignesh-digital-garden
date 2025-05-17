@@ -30,15 +30,15 @@ const projects: Project[] = [
 
 const ProjectCard: React.FC<{ project: Project }> = ({ project }) => {
   return (
-    <div className="bg-white border border-gray-100 rounded-lg p-6 hover:shadow-sm transition duration-200">
-      <h3 className="text-lg font-semibold mb-3">{project.title}</h3>
+    <div className="bg-white border border-gray-100 rounded-lg p-6 hover:shadow-sm transition duration-200 hover:border-accent-light">
+      <h3 className="text-lg font-semibold mb-3 text-accent-dark">{project.title}</h3>
       <p className="text-gray-700 mb-4 text-sm">{project.description}</p>
       
       <div className="mb-4">
         <h4 className="text-xs uppercase tracking-wide text-gray-500 mb-2">Tech</h4>
         <div className="flex flex-wrap gap-2">
           {project.techStack.map((tech, index) => (
-            <span key={index} className="inline-flex text-xs bg-gray-100 px-2 py-1 rounded">
+            <span key={index} className="inline-flex text-xs bg-accent-light text-accent-dark px-2 py-1 rounded">
               {tech}
             </span>
           ))}
@@ -50,7 +50,7 @@ const ProjectCard: React.FC<{ project: Project }> = ({ project }) => {
           {project.githubUrl && (
             <a 
               href={project.githubUrl}
-              className="text-xs text-gray-600 hover:text-gray-900"
+              className="text-xs text-highlight hover:text-highlight-dark"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -60,7 +60,7 @@ const ProjectCard: React.FC<{ project: Project }> = ({ project }) => {
           {project.demoUrl && (
             <a 
               href={project.demoUrl}
-              className="text-xs text-gray-600 hover:text-gray-900"
+              className="text-xs text-highlight hover:text-highlight-dark"
               target="_blank"
               rel="noopener noreferrer"
             >

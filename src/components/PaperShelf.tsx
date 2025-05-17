@@ -48,7 +48,7 @@ const PaperShelf: React.FC = () => {
                   href={paper.url} 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="hover:text-gray-600 transition"
+                  className="text-highlight hover:text-highlight-dark transition"
                 >
                   {paper.title}
                 </a>
@@ -60,7 +60,7 @@ const PaperShelf: React.FC = () => {
                 {paper.tags.map((tag, tagIndex) => (
                   <span 
                     key={tagIndex} 
-                    className="text-xs bg-gray-100 px-2 py-1 rounded"
+                    className="text-xs bg-highlight-light text-highlight-dark px-2 py-1 rounded"
                   >
                     {tag}
                   </span>

@@ -8,31 +8,37 @@ const Header: React.FC = () => {
     <header className="py-6">
       <Container>
         <div className="flex justify-between items-center">
-          <a href="#" className="text-sm font-medium hover:text-gray-600 transition">
+          <a href="#" className="text-sm font-medium text-accent hover:text-accent-dark transition">
             Raahul Vignesh
           </a>
           <nav className="flex items-center space-x-4">
             <a 
               href="#about" 
-              className="text-sm text-gray-600 hover:text-gray-900 transition"
+              className="text-sm text-gray-600 hover:text-accent transition"
             >
               About
             </a>
             <a 
+              href="#experience" 
+              className="text-sm text-gray-600 hover:text-accent transition"
+            >
+              Experience
+            </a>
+            <a 
               href="#works" 
-              className="text-sm text-gray-600 hover:text-gray-900 transition"
+              className="text-sm text-gray-600 hover:text-accent transition"
             >
               Works
             </a>
             <a 
               href="#papers" 
-              className="text-sm text-gray-600 hover:text-gray-900 transition"
+              className="text-sm text-gray-600 hover:text-accent transition"
             >
               Papers
             </a>
             <a 
               href="#resume" 
-              className="text-sm text-gray-600 hover:text-gray-900 transition"
+              className="text-sm text-gray-600 hover:text-accent transition"
             >
               Resume
             </a>
@@ -41,7 +47,7 @@ const Header: React.FC = () => {
                 href="https://github.com/raahulv" 
                 target="_blank" 
                 rel="noopener noreferrer" 
-                className="text-gray-600 hover:text-gray-900 transition"
+                className="text-gray-600 hover:text-highlight transition"
                 aria-label="GitHub Profile"
               >
                 <Github size={18} />
@@ -50,7 +56,7 @@ const Header: React.FC = () => {
                 href="https://linkedin.com/in/raahulvignesh" 
                 target="_blank" 
                 rel="noopener noreferrer" 
-                className="text-gray-600 hover:text-gray-900 transition"
+                className="text-gray-600 hover:text-highlight transition"
                 aria-label="LinkedIn Profile"
               >
                 <Linkedin size={18} />

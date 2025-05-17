@@ -7,10 +7,10 @@ const Hero: React.FC = () => {
     <section className="py-24">
       <Container>
         <h1 className="text-4xl sm:text-5xl font-bold mb-4">
-          Hey, I'm Raahul Vignesh
+          Hey, I'm <span className="text-accent">Raahul Vignesh</span>
         </h1>
         <h2 className="text-xl sm:text-2xl text-gray-600 mb-6">
-          backend developer, system thinker, and AI tinkerer
+          backend developer, system thinker, and <span className="text-highlight">AI tinkerer</span>
         </h2>
         <p className="text-lg max-w-2xl text-gray-700">
           I'm a software developer at IBM, where I build scalable systems at the intersection of backend engineering and AI. 

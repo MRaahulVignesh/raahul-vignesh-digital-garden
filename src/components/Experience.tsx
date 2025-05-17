@@ -46,17 +46,17 @@ const Experience: React.FC = () => {
             <div key={index} className="relative">
               <div className="flex flex-col md:flex-row gap-4">
                 <div className="md:w-1/3">
-                  <h3 className="font-medium text-lg">{exp.position}</h3>
+                  <h3 className="font-medium text-lg text-accent-dark">{exp.position}</h3>
                   <div className="flex items-center gap-2 text-gray-600 mt-1">
-                    <Building className="h-4 w-4" />
+                    <Building className="h-4 w-4 text-accent" />
                     <span>{exp.company}</span>
                   </div>
                   <div className="flex items-center gap-2 text-gray-600 mt-1">
-                    <Calendar className="h-4 w-4" />
+                    <Calendar className="h-4 w-4 text-accent" />
                     <span>{exp.duration}</span>
                   </div>
                   <div className="flex items-center gap-2 text-gray-600 mt-1">
-                    <MapPin className="h-4 w-4" />
+                    <MapPin className="h-4 w-4 text-accent" />
                     <span>{exp.location}</span>
                   </div>
                 </div>
@@ -69,7 +69,7 @@ const Experience: React.FC = () => {
                 </div>
               </div>
               {index < experiences.length - 1 && (
-                <div className="absolute left-0 top-full mt-5 h-5 border-l-2 border-dashed border-gray-200" />
+                <div className="absolute left-0 top-full mt-5 h-5 border-l-2 border-dashed border-accent-light" />
               )}
             </div>
           ))}

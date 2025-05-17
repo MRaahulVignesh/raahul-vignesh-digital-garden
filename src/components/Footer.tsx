@@ -11,7 +11,7 @@ const Footer: React.FC = () => {
       <Container>
         <div className="flex flex-col sm:flex-row justify-between items-center">
           <div className="mb-4 sm:mb-0 text-sm text-gray-600">
-            © {year} Raahul Vignesh. All rights reserved.
+            © {year} <span className="text-accent">Raahul Vignesh</span>. All rights reserved.
           </div>
           
           <div className="flex space-x-4">
@@ -19,7 +19,7 @@ const Footer: React.FC = () => {
               href="https://github.com/raahulv" 
               target="_blank" 
               rel="noopener noreferrer" 
-              className="text-gray-600 hover:text-gray-900 transition"
+              className="text-gray-600 hover:text-highlight transition"
               aria-label="GitHub Profile"
             >
               <Github size={18} />
@@ -28,7 +28,7 @@ const Footer: React.FC = () => {
               href="https://linkedin.com/in/raahulvignesh" 
               target="_blank" 
               rel="noopener noreferrer" 
-              className="text-gray-600 hover:text-gray-900 transition"
+              className="text-gray-600 hover:text-highlight transition"
               aria-label="LinkedIn Profile"
             >
               <Linkedin size={18} />
