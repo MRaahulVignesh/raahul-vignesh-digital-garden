@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -44,14 +45,14 @@ export default {
 					foreground: 'hsl(var(--muted-foreground))'
 				},
 				accent: {
-					DEFAULT: '#8B5CF6', // Main accent (purple)
-					light: '#E5DEFF',   // Light purple for backgrounds
-					dark: '#6E59A5',    // Darker purple for text/borders
+					DEFAULT: '#F97316', // Main accent (orange)
+					light: '#FFEDD5',   // Light orange for backgrounds
+					dark: '#EA580C',    // Darker orange for text/borders
 				},
 				highlight: {
-					DEFAULT: '#0EA5E9', // Secondary accent (blue)
-					light: '#D3E4FD',   // Light blue for backgrounds
-					dark: '#0C8AC7',    // Darker blue for text/borders
+					DEFAULT: '#0EA5E9', // Secondary accent (teal green/blue)
+					light: '#DBEAFE',   // Light teal for backgrounds
+					dark: '#0284C7',    // Darker teal for text/borders
 				},
 				card: {
 					DEFAULT: 'hsl(var(--card))',
