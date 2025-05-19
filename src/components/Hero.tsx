@@ -16,38 +16,38 @@ const Hero: React.FC = () => {
               <h2 className="bold text-xl text-tagline md:text-2xl text-gray-600 mb-4">
                 Engineering the future of Software and AI
               </h2>
-              
+
               {/* Social Icons */}
               <div className="flex space-x-4 mb-6">
-                <a 
-                  href="https://github.com/raahulv" 
-                  target="_blank" 
+                <a
+                  href="https://github.com/MRaahulVignesh"
+                  target="_blank"
                   rel="noopener noreferrer"
                   className="p-2 text-gray-600 hover:text-accent transition-colors"
                   aria-label="GitHub"
                 >
                   <Github size={24} />
                 </a>
-                <a 
-                  href="https://linkedin.com/in/raahulvignesh" 
-                  target="_blank" 
+                <a
+                  href="https://linkedin.com/in/mraahulvignesh"
+                  target="_blank"
                   rel="noopener noreferrer"
                   className="p-2 text-gray-600 hover:text-highlight transition-colors"
                   aria-label="LinkedIn"
                 >
                   <Linkedin size={24} />
                 </a>
-                <a 
-                  href="https://leetcode.com/raahulv" 
-                  target="_blank" 
+                <a
+                  href="https://leetcode.com/u/user6646fq/"
+                  target="_blank"
                   rel="noopener noreferrer"
                   className="p-2 text-gray-600 hover:text-accent transition-colors"
                   aria-label="LeetCode"
                 >
                   <Code size={24} />
                 </a>
-                <a 
-                  href="mailto:contact@raahulvignesh.com" 
+                <a
+                  href="mailto:contact@raahulvignesh.com"
                   className="p-2 text-gray-600 hover:text-highlight transition-colors"
                   aria-label="Email"
                 >

@@ -38,7 +38,7 @@ const Header: React.FC = () => {
               ))}
               <div className="flex items-center space-x-3 ml-2">
                 <a
-                  href="https://github.com/raahulv"
+                  href="https://github.com/MRaahulVignesh"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-gray-600 hover:text-highlight transition"
@@ -47,7 +47,7 @@ const Header: React.FC = () => {
                   <Github size={18} />
                 </a>
                 <a
-                  href="https://linkedin.com/in/raahulvignesh"
+                  href="https://linkedin.com/in/mraahulvignesh"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-gray-600 hover:text-highlight transition"
