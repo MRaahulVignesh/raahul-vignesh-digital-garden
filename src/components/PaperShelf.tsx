@@ -1,6 +1,8 @@
 
 import React from 'react';
 import Container from './Container';
+import { Link } from 'react-router-dom';
+import { ArrowRight } from 'lucide-react';
 
 interface Paper {
   title: string;
@@ -34,11 +36,16 @@ const PaperShelf: React.FC = () => {
   return (
     <section id="papers" className="py-16 border-t border-gray-100">
       <Container>
-        <h2 className="text-2xl font-semibold mb-4">Paper Shelf</h2>
-        <p className="text-gray-700 mb-8">
-          I usually read some papers every week and I store the most memorable here. Each one taught me something 
-          valuable — about models, infrastructure, or how we think about AI.
-        </p>
+        <div className="flex justify-between items-center mb-8">
+          <h2 className="text-2xl font-semibold">Paper Shelf</h2>
+          <Link 
+            to="/papers" 
+            className="inline-flex items-center text-highlight hover:text-highlight-dark transition-colors"
+          >
+            View all papers
+            <ArrowRight size={16} className="ml-1" />
+          </Link>
+        </div>
         
         <div className="space-y-6">
           {papers.map((paper, index) => (
