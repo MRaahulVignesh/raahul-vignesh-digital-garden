@@ -54,10 +54,10 @@ const Skills: React.FC = () => {
         <h2 className="text-2xl font-semibold mb-8">Skills</h2>
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {skillCategories.map((category, index) => (
+          {skillCategories.slice(0, 6).map((category, index) => (
             <div 
               key={index} 
-              className="bg-white border-2 border-gray-300 hover:border-accent rounded-lg p-6 shadow-sm hover:shadow-md transition-all duration-300"
+              className="bg-white border-2 border-gray-200 hover:border-accent rounded-lg p-6 shadow-sm hover:shadow-md transition-all duration-300"
             >
               <div className="flex items-center gap-2 mb-3">
                 {category.icon}
@@ -75,6 +75,28 @@ const Skills: React.FC = () => {
               </div>
             </div>
           ))}
+          
+          {/* Center the "Others" card */}
+          <div className="lg:col-span-3 md:col-span-2 flex justify-center">
+            <div 
+              className="bg-white border-2 border-gray-200 hover:border-accent rounded-lg p-6 shadow-sm hover:shadow-md transition-all duration-300 w-full max-w-md"
+            >
+              <div className="flex items-center gap-2 mb-3">
+                {skillCategories[6].icon}
+                <h3 className="text-lg font-medium text-accent">{skillCategories[6].title}</h3>
+              </div>
+              <div className="flex flex-wrap gap-2 justify-center">
+                {skillCategories[6].skills.map((skill, skillIndex) => (
+                  <span 
+                    key={skillIndex} 
+                    className="px-2 py-1 bg-gray-100 text-gray-600 text-xs rounded border border-gray-200"
+                  >
+                    {skill}
+                  </span>
+                ))}
+              </div>
+            </div>
+          </div>
         </div>
       </Container>
     </section>

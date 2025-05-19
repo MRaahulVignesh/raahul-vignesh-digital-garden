@@ -10,6 +10,7 @@ const Header: React.FC = () => {
   const navItems = [
     { text: 'About', url: '/#about' },
     { text: 'Experience', url: '/#experience' },
+    { text: 'Skills', url: '/#skills' },
     { text: 'Works', url: '/works' },
     { text: 'Papers', url: '/papers' },
     { text: 'Resume', url: '/#resume' },
@@ -28,13 +29,23 @@ const Header: React.FC = () => {
             {/* Desktop Nav */}
             <nav className="hidden md:flex items-center space-x-6">
               {navItems.map(({ text, url }) => (
-                <Link
+                <a
                   key={text}
-                  to={url}
+                  href={url}
                   className="text-md text-gray-600 hover:text-accent relative hover:underline underline-offset-4 decoration-2 decoration-accent transition-all duration-200"
+                  onClick={(e) => {
+                    if (url.startsWith('/#')) {
+                      e.preventDefault();
+                      const id = url.substring(2);
+                      const element = document.getElementById(id);
+                      if (element) {
+                        element.scrollIntoView({ behavior: 'smooth' });
+                      }
+                    }
+                  }}
                 >
                   {text}
-                </Link>
+                </a>
               ))}
             </nav>
 
@@ -49,14 +60,24 @@ const Header: React.FC = () => {
         {menuOpen && (
           <div className="md:hidden mt-6 space-y-4">
             {navItems.map(({ text, url }) => (
-              <Link
+              <a
                 key={text}
-                to={url}
+                href={url}
                 className="block text-lg text-center text-gray-700 hover:text-accent relative hover:underline underline-offset-4 decoration-2 decoration-accent transition-all duration-200"
-                onClick={() => setMenuOpen(false)}
+                onClick={(e) => {
+                  setMenuOpen(false);
+                  if (url.startsWith('/#')) {
+                    e.preventDefault();
+                    const id = url.substring(2);
+                    const element = document.getElementById(id);
+                    if (element) {
+                      element.scrollIntoView({ behavior: 'smooth' });
+                    }
+                  }
+                }}
               >
                 {text}
-              </Link>
+              </a>
             ))}
           </div>
         )}

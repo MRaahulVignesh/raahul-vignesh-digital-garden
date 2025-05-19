@@ -9,6 +9,7 @@ interface ExperienceItem {
   position: string;
   duration: string;
   location: string;
+  description: string[];
 }
 
 const experiences: ExperienceItem[] = [
@@ -17,12 +18,24 @@ const experiences: ExperienceItem[] = [
     position: "Software Developer",
     duration: "Jan 2022 - Present",
     location: "San Francisco, CA",
+    description: [
+      "Led development of microservices architecture using Node.js and Docker",
+      "Optimized database queries, resulting in 40% performance improvement",
+      "Implemented CI/CD pipelines using Jenkins and GitHub Actions",
+      "Mentored junior developers and conducted code reviews"
+    ]
   },
   {
     company: "Startup Name",
     position: "Founding Engineer",
     duration: "Apr 2021 - Dec 2021",
     location: "Remote",
+    description: [
+      "Built MVP as the first engineer — from scratch to production in 4 months",
+      "Architected and implemented the entire backend infrastructure",
+      "Created scalable API layer and core business logic",
+      "Led integration with payment processors and third-party APIs"
+    ]
   }
 ];
 
@@ -34,11 +47,6 @@ const Experience: React.FC = () => {
         <div className="grid gap-8">
           {experiences.map((exp, index) => (
             <div key={index} className="relative">
-              {index !== 0 && (
-                <div className="absolute top-0 left-0 h-full">
-                  <div className="w-px h-full bg-gray-300"></div>
-                </div>
-              )}
               <div className="relative grid grid-cols-1 md:grid-cols-8 gap-6">
                 <div className="md:col-span-5 md:order-2">
                   <h3 className="text-xl font-medium text-accent">{exp.position}</h3>
@@ -53,6 +61,13 @@ const Experience: React.FC = () => {
                       <MapPin className="h-4 w-4 mr-2 text-highlight" />
                       <span>{exp.location}</span>
                     </div>
+                  </div>
+                  <div className="mt-4">
+                    <ul className="list-disc pl-5 space-y-1">
+                      {exp.description.map((item, i) => (
+                        <li key={i} className="text-gray-700">{item}</li>
+                      ))}
+                    </ul>
                   </div>
                 </div>
                 <div className="md:col-span-3 md:order-1">
