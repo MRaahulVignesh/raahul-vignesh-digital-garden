@@ -1,7 +1,7 @@
 
 import React, { useState } from 'react';
 import Container from './Container';
-import { Github, Linkedin, Menu, X } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const Header: React.FC = () => {
@@ -18,7 +18,7 @@ const Header: React.FC = () => {
   return (
     <header className="sticky top-0 bg-white z-50">
       <Container>
-        <div className="border-b-2 border-black-700">
+        <div className="border-b-2 border-black">
           <div className="flex justify-between items-center pt-4 pb-4 px-4 py-4">
             {/* Logo */}
             <Link to="/" className="text-lg font-medium hover:text-accent-dark transition">
@@ -36,26 +36,6 @@ const Header: React.FC = () => {
                   {text}
                 </Link>
               ))}
-              <div className="flex items-center space-x-3 ml-2">
-                <a
-                  href="https://github.com/MRaahulVignesh"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-gray-600 hover:text-highlight transition"
-                  aria-label="GitHub Profile"
-                >
-                  <Github size={18} />
-                </a>
-                <a
-                  href="https://linkedin.com/in/mraahulvignesh"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-gray-600 hover:text-highlight transition"
-                  aria-label="LinkedIn Profile"
-                >
-                  <Linkedin size={18} />
-                </a>
-              </div>
             </nav>
 
             {/* Mobile Menu Button */}

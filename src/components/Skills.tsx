@@ -49,7 +49,7 @@ const skillCategories: SkillCategory[] = [
 
 const Skills: React.FC = () => {
   return (
-    <section id="skills" className="py-16 border-t border-gray-100">
+    <section id="skills" className="py-16 border-t border-black">
       <Container>
         <h2 className="text-2xl font-semibold mb-8">Skills</h2>
         
@@ -57,7 +57,7 @@ const Skills: React.FC = () => {
           {skillCategories.map((category, index) => (
             <div 
               key={index} 
-              className="bg-white border border-gray-100 rounded-lg p-6 shadow-sm hover:shadow-md transition-shadow duration-300 hover:border-accent-light"
+              className="bg-white border-2 border-gray-300 hover:border-accent rounded-lg p-6 shadow-sm hover:shadow-md transition-all duration-300"
             >
               <div className="flex items-center gap-2 mb-3">
                 {category.icon}
@@ -67,7 +67,7 @@ const Skills: React.FC = () => {
                 {category.skills.map((skill, skillIndex) => (
                   <span 
                     key={skillIndex} 
-                    className="px-2 py-1 bg-gray-100 text-gray-600 text-xs rounded"
+                    className="px-2 py-1 bg-gray-100 text-gray-600 text-xs rounded border border-gray-200"
                   >
                     {skill}
                   </span>

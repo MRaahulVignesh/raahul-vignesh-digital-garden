@@ -2,6 +2,7 @@
 import React from 'react';
 import Container from './Container';
 import { MapPin, Calendar } from 'lucide-react';
+import { Separator } from "@/components/ui/separator";
 
 interface ExperienceItem {
   company: string;
@@ -27,31 +28,40 @@ const experiences: ExperienceItem[] = [
 
 const Experience: React.FC = () => {
   return (
-    <section id="experience" className="py-16 border-t border-gray-100">
+    <section id="experience" className="py-16 border-t border-black">
       <Container>
-        <h2 className="text-2xl font-semibold mb-6">Experience</h2>
-        <div className="space-y-4">
+        <h2 className="text-2xl font-semibold mb-8">Experience</h2>
+        <div className="grid gap-8">
           {experiences.map((exp, index) => (
-            <div 
-              key={index} 
-              className="p-5 border-l-4 border-accent bg-gray-50 hover:bg-gray-100 transition-all duration-300"
-            >
-              <div className="flex flex-col md:flex-row md:items-center md:justify-between">
-                <div>
-                  <h3 className="text-xl font-medium text-accent mb-1">{exp.position}</h3>
-                  <p className="text-lg font-medium">{exp.company}</p>
+            <div key={index} className="relative">
+              {index !== 0 && (
+                <div className="absolute top-0 left-0 h-full">
+                  <div className="w-px h-full bg-gray-300"></div>
                 </div>
-                <div className="mt-2 md:mt-0">
-                  <div className="flex items-center text-gray-600 mb-1">
-                    <Calendar className="h-4 w-4 mr-2 text-highlight" />
-                    <span>{exp.duration}</span>
+              )}
+              <div className="relative grid grid-cols-1 md:grid-cols-8 gap-6">
+                <div className="md:col-span-5 md:order-2">
+                  <h3 className="text-xl font-medium text-accent">{exp.position}</h3>
+                  <h4 className="text-lg font-medium mt-1">{exp.company}</h4>
+                  <div className="mt-4 flex flex-col md:flex-row md:items-center text-gray-700 gap-4">
+                    <div className="flex items-center">
+                      <Calendar className="h-4 w-4 mr-2 text-highlight" />
+                      <span>{exp.duration}</span>
+                    </div>
+                    <div className="hidden md:block w-1 h-1 bg-gray-400 rounded-full"></div>
+                    <div className="flex items-center">
+                      <MapPin className="h-4 w-4 mr-2 text-highlight" />
+                      <span>{exp.location}</span>
+                    </div>
                   </div>
-                  <div className="flex items-center text-gray-600">
-                    <MapPin className="h-4 w-4 mr-2 text-highlight" />
-                    <span>{exp.location}</span>
-                  </div>
+                </div>
+                <div className="md:col-span-3 md:order-1">
+                  {/* This space can be used for additional info like company logo, accomplishments, etc */}
                 </div>
               </div>
+              {index !== experiences.length - 1 && (
+                <Separator className="my-6 bg-gray-200" />
+              )}
             </div>
           ))}
         </div>
