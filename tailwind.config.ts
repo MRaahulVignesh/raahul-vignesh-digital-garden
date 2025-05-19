@@ -54,6 +54,9 @@ export default {
 					light: '#DBEAFE',   // Light teal for backgrounds
 					dark: '#0284C7',    // Darker teal for text/borders
 				},
+				tagline: {
+					DEFAULT: '#e01a4f'
+				},
 				card: {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
