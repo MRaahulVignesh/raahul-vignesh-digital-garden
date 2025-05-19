@@ -47,23 +47,23 @@ const PaperShelf: React.FC = () => {
           </Link>
         </div>
         
-        <div className="space-y-6">
+        <div className="space-y-4">
           {papers.map((paper, index) => (
-            <div key={index} className="border-b border-gray-100 pb-6 last:border-0">
-              <h3 className="font-medium mb-1">
-                <a 
-                  href={paper.url} 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="text-highlight hover:text-highlight-dark transition"
-                >
-                  {paper.title}
-                </a>
-              </h3>
-              <div className="flex items-center text-sm text-gray-500 mb-2">
-                <span>{paper.dateRead}</span>
+            <div key={index} className="pb-4 border-b border-gray-100 last:border-0">
+              <div className="flex flex-col sm:flex-row sm:justify-between sm:items-baseline">
+                <h3 className="font-medium">
+                  <a 
+                    href={paper.url} 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="text-highlight hover:text-highlight-dark transition"
+                  >
+                    {paper.title}
+                  </a>
+                </h3>
+                <span className="text-sm text-gray-500 mt-1 sm:mt-0">{paper.dateRead}</span>
               </div>
-              <div className="flex gap-2">
+              <div className="flex flex-wrap gap-2 mt-2">
                 {paper.tags.map((tag, tagIndex) => (
                   <span 
                     key={tagIndex} 

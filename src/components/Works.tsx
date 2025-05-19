@@ -6,7 +6,7 @@ import { ArrowRight } from 'lucide-react';
 
 interface Project {
   title: string;
-  description: string;
+  description: string[];  // Changed to array for bullet points
   techStack: string[];
   githubUrl?: string;
   demoUrl?: string;
@@ -15,17 +15,29 @@ interface Project {
 const projects: Project[] = [
   {
     title: "Centralized Auth Service",
-    description: "A lightweight service that issues scoped access tokens for API authentication across multiple microservices. Focused on simplicity, security, and stateless validation.",
+    description: [
+      "Lightweight service issuing scoped access tokens for API authentication",
+      "Implemented JWT-based authentication with configurable scopes",
+      "Designed for stateless validation across multiple microservices"
+    ],
     techStack: ["Python", "JWT", "FastAPI", "Docker"]
   },
   {
     title: "Retrieval-Augmented Generation System",
-    description: "Designed and deployed a multi-stage RAG pipeline to power enterprise document retrieval and question-answering systems.",
+    description: [
+      "Built multi-stage RAG pipeline for enterprise document retrieval",
+      "Implemented custom ranking algorithms to improve response relevance",
+      "Deployed on Kubernetes with auto-scaling capabilities"
+    ],
     techStack: ["Python", "LangChain", "FastAPI", "Vector DBs"]
   },
   {
     title: "Startup MVP",
-    description: "Built the MVP for a seed-stage startup as the first engineer — from scratch to production in 4 months.",
+    description: [
+      "Built MVP as the first engineer — from scratch to production in 4 months",
+      "Architected and implemented the entire backend infrastructure",
+      "Created scalable API layer and core business logic"
+    ],
     techStack: ["Node.js", "PostgreSQL", "Docker", "Kubernetes"]
   }
 ];
@@ -34,7 +46,12 @@ const ProjectCard: React.FC<{ project: Project }> = ({ project }) => {
   return (
     <div className="bg-white border border-gray-100 rounded-lg p-6 hover:shadow-sm transition duration-200 hover:border-accent-light">
       <h3 className="text-lg font-semibold mb-3 text-accent-dark">{project.title}</h3>
-      <p className="text-gray-700 mb-4 text-sm">{project.description}</p>
+      
+      <ul className="list-disc pl-5 mb-4 text-gray-700 space-y-1">
+        {project.description.map((point, idx) => (
+          <li key={idx} className="text-sm">{point}</li>
+        ))}
+      </ul>
       
       <div className="mb-4">
         <h4 className="text-xs uppercase tracking-wide text-gray-500 mb-2">Tech</h4>

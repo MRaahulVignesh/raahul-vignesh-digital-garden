@@ -17,13 +17,13 @@ const Hero: React.FC = () => {
                 Engineering the future of Software and AI
               </h2>
 
-              {/* Social Icons */}
+              {/* Social Icons with colors */}
               <div className="flex space-x-4 mb-6">
                 <a
                   href="https://github.com/MRaahulVignesh"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="p-2 text-gray-600 hover:text-accent transition-colors"
+                  className="p-2 text-gray-800 hover:text-accent transition-colors"
                   aria-label="GitHub"
                 >
                   <Github size={24} />
@@ -32,7 +32,7 @@ const Hero: React.FC = () => {
                   href="https://linkedin.com/in/mraahulvignesh"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="p-2 text-gray-600 hover:text-highlight transition-colors"
+                  className="p-2 text-[#0A66C2] hover:text-highlight transition-colors"
                   aria-label="LinkedIn"
                 >
                   <Linkedin size={24} />
@@ -41,14 +41,14 @@ const Hero: React.FC = () => {
                   href="https://leetcode.com/u/user6646fq/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="p-2 text-gray-600 hover:text-accent transition-colors"
+                  className="p-2 text-[#FFA116] hover:text-accent transition-colors"
                   aria-label="LeetCode"
                 >
                   <Code size={24} />
                 </a>
                 <a
                   href="mailto:contact@raahulvignesh.com"
-                  className="p-2 text-gray-600 hover:text-highlight transition-colors"
+                  className="p-2 text-[#EA4335] hover:text-highlight transition-colors"
                   aria-label="Email"
                 >
                   <Mail size={24} />
