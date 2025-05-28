@@ -2,6 +2,7 @@
 import React from 'react';
 import Container from './Container';
 import { Github, Linkedin, Code, Mail } from 'lucide-react';
+import titleImage from '@/assests/title_img_1.png';
 
 const Hero: React.FC = () => {
   return (
@@ -59,7 +60,7 @@ const Hero: React.FC = () => {
 
           <div className="lg:row-span-2 lg:col-start-2 flex items-center justify-center">
             <img
-              src="/title_img_1.png"
+              src={titleImage}
               alt="Raahul Vignesh"
               className="w-72 h-72 md:w-96 md:h-96 lg:w-[32rem] lg:h-[32rem] object-cover rounded-xl"
             />
